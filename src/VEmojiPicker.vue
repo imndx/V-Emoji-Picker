@@ -265,7 +265,7 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
 .emoji-picker {
   --ep-color-bg: #f0f0f0;
   --ep-color-sbg: #f6f6f6;

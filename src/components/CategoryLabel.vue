@@ -15,15 +15,15 @@ export default defineComponent({
 
 </script>
 
-<style lang='scss' scoped>
+<style lang='css' scoped>
 .category-title {
   text-transform: uppercase;
   font-size: 0.8em;
   padding: 5px 0 0 16px;
   color: #676666;
 
-  &:not(:first-of-type) {
-    padding: 10px 0 0 16px;
-  }
+}
+.category-title:not(:first-of-type) {
+  padding: 10px 0 0 16px;
 }
 </style>

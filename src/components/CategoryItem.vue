@@ -28,7 +28,7 @@ export default defineComponent({
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
 .svg {
   display: inline-block;
   vertical-align: middle;

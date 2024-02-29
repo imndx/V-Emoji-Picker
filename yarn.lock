@@ -177,7 +177,7 @@
     core-js "^2.6.12"
     regenerator-runtime "^0.14.0"
 
-"@babel/runtime@^7.11.2", "@babel/runtime@^7.13.8":
+"@babel/runtime@^7.13.8":
   version "7.24.0"
   resolved "https://registry.npmmirror.com/@babel/runtime/-/runtime-7.24.0.tgz#584c450063ffda59697021430cb47101b085951e"
   integrity sha512-Chk32uHMg6TnQdvw2e9IlqPpFX/6NLuK0Ys2PqLb7/gL5uFn9mXvK715FGLlOLQrcO4qIkNHkvPGktzzXexsFw==
@@ -476,15 +476,6 @@
     is-module "^1.0.0"
     resolve "^1.22.1"
 
-"@rollup/pluginutils@^3 || ^4 || ^5", "@rollup/pluginutils@^5.0.1":
-  version "5.1.0"
-  resolved "https://registry.npmmirror.com/@rollup/pluginutils/-/pluginutils-5.1.0.tgz#7e53eddc8c7f483a4ad0b94afb1f7f5fd3c771e0"
-  integrity sha512-XTIWOPPcpvyKI6L1NHo0lFlCyznUEyPmPY1mc3KpPVDYulHSTvyeLNVW00QTLIAFNhR3kYnJTQHeGqU4M3n09g==
-  dependencies:
-    "@types/estree" "^1.0.0"
-    estree-walker "^2.0.2"
-    picomatch "^2.3.1"
-
 "@rollup/pluginutils@^4.1.2":
   version "4.2.1"
   resolved "https://registry.npmmirror.com/@rollup/pluginutils/-/pluginutils-4.2.1.tgz#e6c6c3aba0744edce3fb2074922d3776c0af2a6d"
@@ -492,6 +483,15 @@
   dependencies:
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
+
+"@rollup/pluginutils@^5.0.1":
+  version "5.1.0"
+  resolved "https://registry.npmmirror.com/@rollup/pluginutils/-/pluginutils-5.1.0.tgz#7e53eddc8c7f483a4ad0b94afb1f7f5fd3c771e0"
+  integrity sha512-XTIWOPPcpvyKI6L1NHo0lFlCyznUEyPmPY1mc3KpPVDYulHSTvyeLNVW00QTLIAFNhR3kYnJTQHeGqU4M3n09g==
+  dependencies:
+    "@types/estree" "^1.0.0"
+    estree-walker "^2.0.2"
+    picomatch "^2.3.1"
 
 "@rollup/rollup-android-arm-eabi@4.12.0":
   version "4.12.0"
@@ -2049,7 +2049,7 @@ chokidar@3.5.1:
   optionalDependencies:
     fsevents "~2.3.1"
 
-"chokidar@>=3.0.0 <4.0.0", chokidar@^3.4.2, chokidar@^3.5.2, chokidar@^3.5.3:
+chokidar@^3.4.2, chokidar@^3.5.2, chokidar@^3.5.3:
   version "3.6.0"
   resolved "https://registry.npmmirror.com/chokidar/-/chokidar-3.6.0.tgz#197c6cc669ef2a8dc5e7b4d97ee4e092c3eb0d5b"
   integrity sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==
@@ -2816,11 +2816,6 @@ emoji-regex@^9.2.2:
   version "9.2.2"
   resolved "https://registry.npmmirror.com/emoji-regex/-/emoji-regex-9.2.2.tgz#840c8803b0d8047f4ff0cf963176b32d4ef3ed72"
   integrity sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==
-
-emojilib@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.npmmirror.com/emojilib/-/emojilib-2.4.0.tgz#ac518a8bb0d5f76dda57289ccb2fdf9d39ae721e"
-  integrity sha512-5U0rVMU5Y2n2+ykNLQqMoqklN9ICBT/KsvC1Gz6vqHbz2AXXGkG+Pm5rMWk/8Vjrr/mY9985Hi8DYzn1F09Nyw==
 
 emojis-list@^3.0.0:
   version "3.0.0"
@@ -3909,11 +3904,6 @@ ignore@^5.1.1, ignore@^5.2.0, ignore@^5.2.4:
   version "5.3.1"
   resolved "https://registry.npmmirror.com/ignore/-/ignore-5.3.1.tgz#5073e554cd42c5b33b394375f538b8593e34d4ef"
   integrity sha512-5Fytz/IraMjqpwfd34ke28PTVMjZjJG2MPn5t7OE4eUCUNf8BAa7b5WUS9/Qvr6mwOQS7Mk6vdsMno5he+T8Xw==
-
-immutable@^4.0.0:
-  version "4.3.5"
-  resolved "https://registry.npmmirror.com/immutable/-/immutable-4.3.5.tgz#f8b436e66d59f99760dc577f5c99a4fd2a5cc5a0"
-  integrity sha512-8eabxkth9gZatlwl5TBuJnCsoTADlL6ftEr7A4qgdaTsPyreilDSnUk57SO+jfKcNtxPa22U5KK6DSeAYhpBJw==
 
 import-fresh@^3.1.0, import-fresh@^3.2.1:
   version "3.3.0"
@@ -6021,7 +6011,7 @@ resolve-from@^4.0.0:
   resolved "https://registry.npmmirror.com/resolve-from/-/resolve-from-4.0.0.tgz#4abcd852ad32dd7baabfe9b40e00a36db5f392e6"
   integrity sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==
 
-resolve@^1.10.0, resolve@^1.12.0, resolve@^1.22.1, resolve@^1.5.0:
+resolve@^1.10.0, resolve@^1.12.0, resolve@^1.22.1:
   version "1.22.8"
   resolved "https://registry.npmmirror.com/resolve/-/resolve-1.22.8.tgz#b6c87a9f2aa06dfab52e3d70ac8cde321fa5a48d"
   integrity sha512-oKWePCxqpd6FlLvGV1VU0x7bkPmmCNolxzjMf4NczoDnQcIWrAF+cPtZn5i6n+RfD2d9i0tzpKnG6Yk168yIyw==
@@ -6092,15 +6082,6 @@ rollup-plugin-filesize@^10.0.0:
     gzip-size "^6.0.0"
     pacote "^15.1.1"
     terser "^5.6.0"
-
-rollup-plugin-sass@^1.12.21:
-  version "1.12.21"
-  resolved "https://registry.npmmirror.com/rollup-plugin-sass/-/rollup-plugin-sass-1.12.21.tgz#0605bfafa37d5c07c6d9fb541d3c85b2a576b2cb"
-  integrity sha512-cvHQHwlQ5MJnzgXqm+xcN394UFZY9BvhW9f4T1ZhbRtq+o7crxAnxeM7M+wthcWGxDt+ItqTDlCrf+Qoa4UDsA==
-  dependencies:
-    "@rollup/pluginutils" "^3 || ^4 || ^5"
-    resolve "^1.5.0"
-    sass "^1.7.2"
 
 rollup-plugin-terser@^7.0.2:
   version "7.0.2"
@@ -6182,22 +6163,6 @@ safe-buffer@5.2.1, safe-buffer@>=5.1.0, safe-buffer@^5.1.0, safe-buffer@~5.2.0:
   version "2.1.2"
   resolved "https://registry.npmmirror.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
-
-sass-loader@^14.1.1:
-  version "14.1.1"
-  resolved "https://registry.npmmirror.com/sass-loader/-/sass-loader-14.1.1.tgz#2c9d2277c5b1c5fe789cd0570c046d8ad23cb7ca"
-  integrity sha512-QX8AasDg75monlybel38BZ49JP5Z+uSKfKwF2rO7S74BywaRmGQMUBw9dtkS+ekyM/QnP+NOrRYq8ABMZ9G8jw==
-  dependencies:
-    neo-async "^2.6.2"
-
-sass@^1.7.2:
-  version "1.71.1"
-  resolved "https://registry.npmmirror.com/sass/-/sass-1.71.1.tgz#dfb09c63ce63f89353777bbd4a88c0a38386ee54"
-  integrity sha512-wovtnV2PxzteLlfNzbgm1tFXPLoZILYAMJtvoXXkD7/+1uP41eKkIt1ypWq5/q2uT94qHjXehEYfmjKOvjL9sg==
-  dependencies:
-    chokidar ">=3.0.0 <4.0.0"
-    immutable "^4.0.0"
-    source-map-js ">=0.6.2 <2.0.0"
 
 saxes@^5.0.1:
   version "5.0.1"
@@ -6475,12 +6440,12 @@ socks@^2.6.2:
     ip-address "^9.0.5"
     smart-buffer "^4.2.0"
 
-"source-map-js@>=0.6.2 <2.0.0", source-map-js@^1.0.2:
+source-map-js@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmmirror.com/source-map-js/-/source-map-js-1.0.2.tgz#adbc361d9c62df380125e7f161f71c826f1e490c"
   integrity sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==
 
-source-map-support@^0.5.13, source-map-support@^0.5.19, source-map-support@~0.5.20:
+source-map-support@^0.5.13, source-map-support@~0.5.20:
   version "0.5.21"
   resolved "https://registry.npmmirror.com/source-map-support/-/source-map-support-0.5.21.tgz#04fe7c7f9e1ed2d662233c28cb2b35b9f63f6e4f"
   integrity sha512-uBHU3L3czsIyYXKX88fdrGovxdSCoTGDRZ6SYXtSRxLZUzHg5P/66Ht6uoUlHu9EZod+inXhKo3qQgwXUT/y1w==
@@ -6907,19 +6872,19 @@ tuf-js@^1.1.7:
     debug "^4.3.4"
     make-fetch-happen "^11.1.1"
 
-twemoji-parser@13.1.0:
-  version "13.1.0"
-  resolved "https://registry.npmmirror.com/twemoji-parser/-/twemoji-parser-13.1.0.tgz#65e7e449c59258791b22ac0b37077349127e3ea4"
-  integrity sha512-AQOzLJpYlpWMy8n+0ATyKKZzWlZBJN+G0C+5lhX7Ftc2PeEVdUU/7ns2Pn2vVje26AIZ/OHwFoUbdv6YYD/wGg==
+twemoji-parser@14.0.0:
+  version "14.0.0"
+  resolved "https://registry.npmmirror.com/twemoji-parser/-/twemoji-parser-14.0.0.tgz#13dabcb6d3a261d9efbf58a1666b182033bf2b62"
+  integrity sha512-9DUOTGLOWs0pFWnh1p6NF+C3CkQ96PWmEFwhOVmT3WbecRC+68AIqpsnJXygfkFcp4aXbOp8Dwbhh/HQgvoRxA==
 
-twemoji@^13.0.1:
-  version "13.1.1"
-  resolved "https://registry.npmmirror.com/twemoji/-/twemoji-13.1.1.tgz#6e31409908bb5383cdb1d09c9c8e7856aa6e2e3b"
-  integrity sha512-IIIoq+n1lk1M1+evBKZD3DO0ud02fDQ4ssbgAv8rp3YBWUeNmskjlisFUPPDacQ50XS3bhrd4Kq9Q2gqhxb0dg==
+twemoji@14.0.2:
+  version "14.0.2"
+  resolved "https://registry.npmmirror.com/twemoji/-/twemoji-14.0.2.tgz#c53adb01dab22bf4870f648ca8cc347ce99ee37e"
+  integrity sha512-BzOoXIe1QVdmsUmZ54xbEH+8AgtOKUiG53zO5vVP2iUu6h5u9lN15NcuS6te4OY96qx0H7JK9vjjl9WQbkTRuA==
   dependencies:
     fs-extra "^8.0.1"
     jsonfile "^5.0.0"
-    twemoji-parser "13.1.0"
+    twemoji-parser "14.0.0"
     universalify "^0.1.2"
 
 type-check@^0.4.0, type-check@~0.4.0:
@@ -6990,15 +6955,12 @@ unique-slug@^4.0.0:
   dependencies:
     imurmurhash "^0.1.4"
 
-universal-emoji-parser@^0.5.28:
-  version "0.5.28"
-  resolved "https://registry.npmmirror.com/universal-emoji-parser/-/universal-emoji-parser-0.5.28.tgz#bf65f746c0115a0cf7aca29442ecf1cc598566c2"
-  integrity sha512-kfaoFQqm+/WZH43GYTXPfclQJ4d/QTLSSn9tbMNt4T9MAnDJlHt6kzgvJyI71ohEhKF911WG+ObcNnYd75xJ8g==
+universal-emoji-parser@^1.0.125:
+  version "1.0.125"
+  resolved "https://registry.npmmirror.com/universal-emoji-parser/-/universal-emoji-parser-1.0.125.tgz#53a7bb746617eb92abf874c78ad559c8cebbd913"
+  integrity sha512-3hHLn7zDQnE6/I5Qz6fVWjOart+ztYJkFuyBmJhv+roAXuJ2I4Iotfh6Aw3q5credzAyMPLn7KykOMgCX5AE4A==
   dependencies:
-    "@babel/runtime" "^7.11.2"
-    emojilib "^2.4.0"
-    source-map-support "^0.5.19"
-    twemoji "^13.0.1"
+    twemoji "14.0.2"
 
 universalify@^0.1.0, universalify@^0.1.2:
   version "0.1.2"

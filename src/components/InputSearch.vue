@@ -40,7 +40,7 @@ export default defineComponent({
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
 #InputSearch {
   display: block;
   width: 100%;
@@ -55,15 +55,15 @@ export default defineComponent({
   margin: 5px 0;
   padding: 0 5%;
 
-  input {
-    width: 100%;
-    font-size: 14px;
-    padding: 6px 8px;
-    box-sizing: border-box;
-    border-radius: 8px;
-    background: var(--ep-color-sbg);
-    color: var(--ep-color-text);
-    border: 1px solid var(--ep-color-border);
-  }
+}
+.container-search input {
+  width: 100%;
+  font-size: 14px;
+  padding: 6px 8px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background: var(--ep-color-sbg);
+  color: var(--ep-color-text);
+  border: 1px solid var(--ep-color-border);
 }
 </style>

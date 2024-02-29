@@ -33,7 +33,7 @@ export default defineComponent({
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
 .sticker {
   display: inline-block;
   text-align: center;
@@ -44,11 +44,11 @@ export default defineComponent({
 
   cursor: pointer;
 
-  &:hover {
-    transform: scale(1.05);
-  }
 }
 
+.sticker:hover {
+  transform: scale(1.05);
+}
 .border:hover {
   background: #00000010;
   border-radius: 8px;

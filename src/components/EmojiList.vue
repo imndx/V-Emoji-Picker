@@ -198,7 +198,7 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
 #Emojis {
   font-family: Twemoji, NotomojiColor, Notomoji, EmojiOne Color, Symbola, Noto,
   Segoe UI Emoji, OpenSansEmoji, monospace;
@@ -208,12 +208,12 @@ export default defineComponent({
   color: var(--ep-color-text);
 
 
-  // Custom Scroll
-  ::-webkit-scrollbar {
-    border-radius: 4px;
-    width: 4px;
-    overflow: hidden;
-  }
+}
+
+#Emojis::-webkit-scrollbar {
+  border-radius: 4px;
+  width: 4px;
+  overflow: hidden;
 }
 
 .container-emoji {

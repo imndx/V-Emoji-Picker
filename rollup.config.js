@@ -3,7 +3,6 @@ import resolve from '@rollup/plugin-node-resolve';
 import typescript from 'rollup-plugin-typescript2';
 import vue from 'rollup-plugin-vue';
 import css from 'rollup-plugin-css-porter';
-import sass from 'rollup-plugin-sass';
 import filesize from 'rollup-plugin-filesize';
 
 // Default configs
@@ -15,7 +14,6 @@ const globals = {
 
 export default {
   input: 'src/index.ts', // our source file
-  inlineDynamicImports: true,
   output: [
     {
       // Keep the bundle as an ES module file, suitable for other bundlers
@@ -57,11 +55,10 @@ export default {
       typescript: require('typescript'),
       module: 'esnext',
       tsconfig: "tsconfig.json",
-      check:false,
+      check: false,
       rollupCommonJSResolveHack: false,
       tsconfigOverride: { exclude: ["node_modules", "src/main.ts", "tests"] }
     }),
-    sass(),
     css(),
     vue({
       css: true,

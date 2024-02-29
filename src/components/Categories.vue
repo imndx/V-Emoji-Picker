@@ -48,7 +48,7 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
 #Categories {
   display: flex;
   width: 100%;
@@ -64,20 +64,19 @@ export default defineComponent({
   padding: 5px;
   text-align: center;
   cursor: pointer;
+}
+.category.active {
+  border-bottom: 3px solid var(--ep-color-active);
+  filter: saturate(3);
+  padding-bottom: 2px;
+}
 
-  &.active {
-    border-bottom: 3px solid var(--ep-color-active);
-    filter: saturate(3);
-    padding-bottom: 2px;
-  }
+.category > img {
+  width: 22px;
+  height: 22px;
+}
 
-  & > img {
-    width: 22px;
-    height: 22px;
-  }
-
-  &:hover {
-    filter: saturate(3);
-  }
+.category:hover {
+  filter: saturate(3);
 }
 </style>

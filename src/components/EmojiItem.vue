@@ -44,7 +44,7 @@ export default defineComponent({
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
 .emoji-c {
   text-align: center;
   padding: 3px;
@@ -57,14 +57,14 @@ export default defineComponent({
   justify-content: center;
   align-items: center;
 
-  &:hover {
-    transform: scale(1.15);
-  }
+}
+.emoji-c:hover {
+  transform: scale(1.15);
+}
 
-  ::v-deep img {
-    width: 28px;
-    height: 28px;
-  }
+.emoji-c ::v-deep img {
+  width: 28px;
+  height: 28px;
 }
 
 .border:hover {
