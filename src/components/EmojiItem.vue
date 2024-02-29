@@ -3,34 +3,45 @@
 </template>
 
 <script lang="ts">
-import {Component, Prop, Vue} from "vue-property-decorator";
 import {IEmoji} from "@/models/Emoji";
 import uEmojiParser from 'universal-emoji-parser';
+import { defineComponent, PropType } from "vue";
 
-@Component({})
-export default class EmojiItem extends Vue {
-  @Prop({}) emoji!: IEmoji;
-  @Prop({}) size!: number;
-  @Prop({}) withBorder!: boolean;
-
-  get styleSize() {
-    return {
-      fontSize: `${this.size - 5}px`,
-      lineHeight: `${this.size}px`,
-      height: `${this.size}px`,
-      width: `${this.size}px`
-    };
-  }
-
-  uemoji(data) {
-    let tmp = uEmojiParser.parse(data);
-    // window.__twemoji_base_url__ = 'https://static.wildfirechat.net/twemoji/assets/';
-    if(window.hasOwnProperty('__twemoji_base_url__')){
-      tmp = tmp.replace(/src="https:\/\/twemoji\.maxcdn\.com\/v\/[0-9.]+\//g, 'src="' + window.__twemoji_base_url__);
+export default defineComponent({
+  computed: {
+        styleSize() {
+            return {
+              fontSize: `${this.size - 5}px`,
+              lineHeight: `${this.size}px`,
+              height: `${this.size}px`,
+              width: `${this.size}px`
+            };
+        }
+    },
+    methods: {
+        uemoji(data) {
+            let tmp = uEmojiParser.parse(data);
+            // window.__twemoji_base_url__ = 'https://static.wildfirechat.net/twemoji/assets/';
+            if(window.hasOwnProperty('__twemoji_base_url__')){
+              tmp = tmp.replace(/src="https:\/\/twemoji\.maxcdn\.com\/v\/[0-9.]+\//g, 'src="' + window.__twemoji_base_url__);
+            }
+            return tmp;
+        }
+    },
+    props: {
+        emoji: {
+            type: Object as PropType<IEmoji>
+        },
+        size: {
+            type: Number,
+            required:true
+        },
+        withBorder: {
+            type: Boolean
+        }
     }
-    return tmp;
-  }
-}
+});
+
 </script>
 
 <style lang="scss" scoped>

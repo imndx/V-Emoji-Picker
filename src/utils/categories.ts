@@ -103,5 +103,5 @@ export const categoriesDefault: ICategory[] = [
   new Category("Places", icons["places"]),
   new Category("Symbols", icons["symbols"]),
   new Category("Flags", icons["flags"]),
-  new Category("Sticker-test", icons["testSticker"])
+  // new Category("Sticker-test", icons["testSticker"])
 ];

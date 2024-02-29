@@ -1,27 +1,36 @@
-
 <template>
   <img :class="['sticker', { 'border': withBorder } ]" :style="styleSize" :src="emoji.data"  alt=""/>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
 import { IEmoji } from "@/models/Emoji";
+import { defineComponent, PropType } from "vue";
 
-@Component({})
-export default class StickerItem extends Vue {
-  @Prop({}) emoji!: IEmoji;
-  @Prop({}) size!: number;
-  @Prop({}) withBorder!: boolean;
+export default defineComponent({
+    computed: {
+        styleSize() {
+            return {
+              fontSize: `${this.size - 5}px`,
+              lineHeight: `${this.size}px`,
+              height: `${this.size}px`,
+              width: `${this.size}px`
+            };
+        }
+    },
+    props: {
+        emoji: {
+            type: Object as PropType<IEmoji>
+        },
+        size: {
+          required:true,
+            type: Number
+        },
+        withBorder: {
+            type: Boolean
+        }
+    }
+});
 
-  get styleSize() {
-    return {
-      fontSize: `${this.size - 5}px`,
-      lineHeight: `${this.size}px`,
-      height: `${this.size}px`,
-      width: `${this.size}px`
-    };
-  }
-}
 </script>
 
 <style lang="scss" scoped>

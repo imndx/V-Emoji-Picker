@@ -3,23 +3,32 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { defineComponent, PropType } from "vue";
 
-@Component({})
-export default class CategoryItem extends Vue {
-  @Prop({ required: true }) label!: string;
-  @Prop({ required: true }) icon!: string;
-  @Prop({}) styles!: object;
+export default defineComponent({
+    computed: {
+        styleSVG() {
+            return {
+              ...this.styles
+            };
+        }
+    },
+    props: {
+        label: { required: true,
+            type: String
+        },
+        icon: { required: true,
+            type: String
+        },
+        styles: {
+            type: Object as PropType<object>
+        }
+    }
+});
 
-  get styleSVG() {
-    return {
-      ...this.styles
-    };
-  }
-}
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .svg {
   display: inline-block;
   vertical-align: middle;

@@ -1,4 +1,4 @@
-import { PluginObject } from 'vue';
+import {DefineComponent, Plugin as PluginObject} from 'vue';
 import _VEmojiPicker from './VEmojiPicker.vue';
 
 import { categoriesDefault } from './utils/categories';
@@ -12,12 +12,13 @@ const defaultOptions = {
   i18n: {}
 };
 
-const plugin: PluginObject<_VEmojiPicker> = {
-  VEmojiPicker: _VEmojiPicker,
-  install: (Vue, opts: any = defaultOptions) => {
+const plugin: PluginObject<DefineComponent> = {
+  // VEmojiPicker: _VEmojiPicker,
+  install: (app, opts: any = defaultOptions) => {
     locale.i18n(opts.i18n);
 
-    Vue.component(_VEmojiPicker.name, _VEmojiPicker);
+    //app.component(_VEmojiPicker.name, _VEmojiPicker);
+    app.component('VEmojiPicker', _VEmojiPicker as unknown as DefineComponent);
   }
 };
 

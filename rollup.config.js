@@ -11,7 +11,6 @@ const name = 'VEmojiPicker';
 const exports = 'named';
 const sourcemap = false;
 const globals = {
-  'vue-property-decorator': 'vuePropertyDecorator'
 };
 
 export default {
@@ -58,7 +57,8 @@ export default {
       typescript: require('typescript'),
       module: 'esnext',
       tsconfig: "tsconfig.json",
-      rollupCommonJSResolveHack: true,
+      check:false,
+      rollupCommonJSResolveHack: false,
       tsconfigOverride: { exclude: ["node_modules", "src/main.ts", "tests"] }
     }),
     sass(),

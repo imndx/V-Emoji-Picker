@@ -7,27 +7,37 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from "vue-property-decorator";
 import { t } from "@/locale";
+import { defineComponent } from "vue";
 
 const timemout = 500;
 let listenInput: number;
 
-@Component({})
-export default class InputSearch extends Vue {
-  inputSearch = "";
+export default defineComponent({
+    data() {
+        return {
+            inputSearch: ""
+        };
+    },
+    computed: {
+        placeholder() {
+            return t("search");
+        }
+    },
+    watch: {
+        "inputSearch": [{
+            handler: "onInputChanged"
+        }]
+    },
+    methods: {
+        onInputChanged(newValue: any, old: any) {
+            clearTimeout(listenInput);
 
-  @Watch("inputSearch")
-  onInputChanged(newValue: any, old: any) {
-    clearTimeout(listenInput);
+                listenInput = setTimeout(() => this.$emit("update", newValue), timemout);
+        }
+    }
+});
 
-    listenInput = setTimeout(() => this.$emit("update", newValue), timemout);
-  }
-
-  get placeholder() {
-    return t("search");
-  }
-}
 </script>
 
 <style lang="scss" scoped>

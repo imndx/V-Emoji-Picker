@@ -1,8 +1,7 @@
-import Vue from "vue";
+import Vue, {createApp} from "vue";
 import AppTest from "./AppTestUi.vue";
 
-Vue.config.productionTip = false;
+const app = createApp(AppTest);
+app.mount('#app');
 
-new Vue({
-  render: h => h(AppTest)
-}).$mount("#app");
+app.config.globalProperties.productionTip = false;

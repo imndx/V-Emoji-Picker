@@ -2,13 +2,17 @@
   <div class="category-title">{{ name }}</div>
 </template>
 
-<script lang='ts'>
-import { Component, Prop, Vue } from "vue-property-decorator";
+<script lang="ts">
+import { defineComponent } from "vue";
 
-@Component({})
-export default class CategoryLabel extends Vue {
-  @Prop({ required: true }) name!: string;
-}
+export default defineComponent({
+    props: {
+        name: { required: true,
+            type: String
+        }
+    }
+});
+
 </script>
 
 <style lang='scss' scoped>

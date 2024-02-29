@@ -1,36 +1,51 @@
 <template>
   <div id="Categories">
     <div
-      v-for="(category, index) in categories"
-      :class="['category', { active: category.name === current }]"
-      :key="index"
-      @click="onSelect(category)"
+        v-for="(category, index) in categories"
+        :class="['category', { active: category.name === current }]"
+        :key="index"
+        @click="onSelect(category)"
     >
-      <CategoryItem :label="category.label" :icon="category.icon" />
+      <CategoryItem :label="category.label" :icon="category.icon"/>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Emit } from "vue-property-decorator";
-import { Category } from "@/models/Category";
+import {Category} from "@/models/Category";
 
 import CategoryItem from "./CategoryItem.vue";
+import {defineComponent, PropType} from "vue";
+import {IEmoji} from "@/models/Emoji";
 
-@Component({
+export default defineComponent({
   components: {
     CategoryItem
-  }
-})
-export default class Categories extends Vue {
-  @Prop({}) categories!: Category[];
-  @Prop({}) current!: string;
+  },
+  emits: ['select'],
 
-  @Emit("select")
-  onSelect(category: Category) {
-    return category;
+  props: {
+    categories: {
+      required: true,
+      type: Array,
+      default: [] as Category[]
+    },
+    current: {
+      required: false,
+      type: String
+    }
+  },
+
+  methods:{
+
+    // TODO
+    //@Emit("select")
+    onSelect(category: Category) {
+      this.$emit('select', category);
+      // return category;
+    }
   }
-}
+});
 </script>
 
 <style lang="scss" scoped>
