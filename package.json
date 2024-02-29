@@ -3,7 +3,7 @@
   "version": "3.0.0",
   "author": {
     "name": "imndx",
-    "email": "imndxxgmail.com",
+    "email": "imndxx@gmail.com",
     "url": "https://github.com/imndx"
   },
   "scripts": {
@@ -12,7 +12,7 @@
     "build:app": "vue-cli-service build --modern",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
-    "prepublishOnly": "yarn build --bundleConfigAsCjs"
+    "prepublishOnly": "yarn build"
   },
   "main": "./lib/v-emoji-picker.cjs.js",
   "module": "./lib/v-emoji-picker.esm.js",
