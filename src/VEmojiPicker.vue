@@ -126,7 +126,7 @@ export default defineComponent({
     },
     i18n: {
       required: false,
-      type: Array,
+      type: Object,
       default: Object
     },
 

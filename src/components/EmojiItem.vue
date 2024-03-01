@@ -62,7 +62,7 @@ export default defineComponent({
   transform: scale(1.15);
 }
 
-.emoji-c ::v-deep img {
+.emoji-c img {
   width: 28px;
   height: 28px;
 }
