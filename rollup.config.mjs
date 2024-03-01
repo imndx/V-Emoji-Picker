@@ -1,5 +1,6 @@
 import pkg from './package.json' assert { type: "json" };
 import resolve from '@rollup/plugin-node-resolve';
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import rpt2 from 'rollup-plugin-typescript2';
 import vue from 'rollup-plugin-vue';
 import css from 'rollup-plugin-css-porter';
@@ -49,9 +50,10 @@ export default {
     },
   ],
   external: [
-    ...Object.keys(pkg.dependencies)
+    // ...Object.keys(pkg.dependencies)
   ],
   plugins: [
+    peerDepsExternal(),
     rpt2({
       typescript: typescript,
       module: 'esnext',
