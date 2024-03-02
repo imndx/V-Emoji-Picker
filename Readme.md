@@ -1,5 +1,8 @@
 # V-Emoji-Picker
 Base on [joaoeudes7's V-Emoji-Picker](https://github.com/joaoeudes7/V-Emoji-Picker) , add sticker support，增加动态表情支持。
+
+本分支只支持 vue3，vue2 项目，请使用 master 分支
+
 ---
 This simple package using ~~Emojis Natives~~
 
@@ -72,7 +75,7 @@ or Global
 import Vue from "vue";
 import App from "./App.vue";
 
-import VEmojiPicker from 'v-emoji-picker';
+import {plugin as VEmojiPicker} from 'v-emoji-picker';
 
 Vue.config.productionTip = false;
 Vue.use(VEmojiPicker);
@@ -180,6 +183,17 @@ const i18n = {
 or import from `locale/lang/${youLang}`
 
 Obs: Default language is en-UK
+
+# ENV
+node: v18.19.0
+
+# Build
+yarn build
+
+# publish
+yarn publish --access public
+
+yarn pack #本地
 
 # Structure Emoji
 ![](.emoji.png)
