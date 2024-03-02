@@ -49,6 +49,12 @@ export default defineComponent({
 .sticker:hover {
   transform: scale(1.05);
 }
+
+.sticker img {
+  width: 64px;
+  height: 64px;
+}
+
 .border:hover {
   background: #00000010;
   border-radius: 8px;

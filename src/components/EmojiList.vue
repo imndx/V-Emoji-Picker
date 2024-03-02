@@ -80,6 +80,10 @@ export default defineComponent({
       required: false,
       type: Number
     },
+    stickerSize: {
+      required: false,
+      type: Number
+    },
     filter: {
       required: true,
       type: String
