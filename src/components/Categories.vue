@@ -6,7 +6,7 @@
         :key="index"
         @click="onSelect(category)"
     >
-      <CategoryItem :label="category.label" :icon="category.icon"/>
+      <CategoryItem :label="category.name" :icon="category.icon"/>
     </div>
   </div>
 </template>
